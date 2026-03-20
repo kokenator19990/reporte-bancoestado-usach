@@ -158,18 +158,30 @@
     <script>
         function downloadPDF() {
             const element = document.querySelector('.container');
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '⌛ Generando...';
+            btn.disabled = true;
+
             const opt = {
-                margin:       0.5,
+                margin:       0.3,
                 filename:     'Sinergia_OpenCore_BancoEstado.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
+                image:        { type: 'jpeg', quality: 0.95 },
                 html2canvas:  { 
-                    scale: 2, 
+                    scale: 1.5, 
                     useCORS: true, 
                     backgroundColor: '#000000' 
                 },
                 jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
-            html2pdf().set(opt).from(element).save();
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }).catch(err => {
+                btn.innerHTML = '❌ Error';
+                setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+            });
         }
     </script>
 </body>
