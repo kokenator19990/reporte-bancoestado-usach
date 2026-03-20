@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary: #000000;
@@ -290,7 +291,7 @@
             
             <div style="margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                 <a href="opencore_report.html" class="badge" style="text-decoration: none; background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent); color: #fff; padding: 12px 24px;">🚀 Sinergia OpenCore & Outreach</a>
-                <button onclick="window.print()" class="badge" style="cursor: pointer; text-decoration: none; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); color: #94a3b8; padding: 12px 24px;">📥 Descargar PDF Dashboard</button>
+                <button onclick="downloadPDF()" class="badge" style="cursor: pointer; text-decoration: none; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); color: #94a3b8; padding: 12px 24px;">📥 Descargar PDF Dashboard</button>
             </div>
 
             <div class="divider"></div>
@@ -394,7 +395,7 @@
                 <a href="opencore_report.html#outreach" style="text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
                     📧 Ver Plantillas Outreach
                 </a>
-                <button onclick="window.print()" style="cursor: pointer; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
+                <button onclick="downloadPDF()" style="cursor: pointer; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
                     📄 Generar PDF: Sinergia Ejecutiva
                 </button>
             </div>
@@ -404,5 +405,24 @@
             <p>&copy; 2026 Inteligencia Estratégica BancoEstado | Documento de Uso Reservado</p>
         </footer>
     </div>
+    <script>
+        function downloadPDF() {
+            const element = document.querySelector('.glass-container');
+            const opt = {
+                margin:       0.5,
+                filename:     'Reporte_Estrategico_BancoEstado.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { 
+                    scale: 2, 
+                    useCORS: true, 
+                    backgroundColor: '#000000' 
+                },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>OpenCore & BancoEstado: Sinergia Estratégica</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary: #000000;
@@ -146,9 +147,30 @@
     <h2 id="outreach">4. Demos de Outreach: Speech Estratégico (LinkedIn / Email)</h2>
     <blockquote>"Hola... te escribo no solo como CEO de OpenCore, sino como colega de la USACH (Informática). Sigo de cerca los desafíos de modernización en BancoEstado..."</blockquote>
 
+    <div style="text-align: center; margin-top: 40px;">
+        <button onclick="downloadPDF()" style="cursor: pointer; background: var(--accent); color: #000; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 700;">📥 Descargar este Reporte en PDF</button>
+    </div>
+
     <div class="footer">
         &copy; 2026 OpenCore Consulting | Documento Confidencial de Uso Estratégico
     </div>
     </div>
+    <script>
+        function downloadPDF() {
+            const element = document.querySelector('.container');
+            const opt = {
+                margin:       0.5,
+                filename:     'Sinergia_OpenCore_BancoEstado.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { 
+                    scale: 2, 
+                    useCORS: true, 
+                    backgroundColor: '#000000' 
+                },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
 </body>
 </html>
