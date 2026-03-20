@@ -44,6 +44,8 @@ Hemos identificado perfiles clave que son "Pain Points" naturales para las capac
 | **Pablo Zamora (Director)** | Innovación / Directorio | Necesidad de rigor científico y escalabilidad sistémica. | Implementación de arquitecturas resilientes inspiradas en sistemas complejos. |
 | **Enrique Fritzsche (GG CajaVecina)** | Operaciones Masivas | Uptime de POS y transaccionalidad atómica en regiones. | Modernización de capas de integración para terminales de alta concurrencia. |
 | **Paula Bandack (Ex-Subgerente)** | Marketing / Clientes | Visibilidad de datos y personalización masiva. | Consolidación de Data Pipelines para inteligencia de clientes en tiempo real. |
+| **Sergio Coyopae (Ex-Arct. Técnica)** | Arquitectura / TI | Modernización de sistemas y escalabilidad de microservicios. | Consultoría en arquitectura Legacy-to-Cloud y despliegue resiliente. |
+| **Fernando del Pino (Adm. Público)** | Gestión / Institucional | Eficiencia en procesos administrativos complejos. | Optimización de flujos de trabajo e interoperabilidad institucional. |
 
 ---
 

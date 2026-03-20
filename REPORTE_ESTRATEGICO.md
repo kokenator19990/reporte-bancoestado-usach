@@ -29,6 +29,11 @@ Este informe complementa y actualiza el análisis previo sobre los tomadores de 
 - **Vínculo USACH:** Aunque su formación de postgrado es de la UC y NYU, mantiene un vínculo sólido como investigador y referente académico en la **Facultad de Administración y Economía (FAE) de la USACH**.
 - **Impacto en TI:** Sus modelos determinan hacia dónde se dirige el capital de inversión del banco. Es el "arquitecto de la justificación económica" para grandes migraciones.
 
+### [NEW] Sergio Rafael Coyopae Hernández (Technical Alumni)
+- **Contexto:** Ex-Arquitectura Técnica en BancoEstado (Trayectoria 2014-2021).
+- **Vínculo USACH:** Ingeniero Civil en Informática.
+- **Relevancia:** Su paso por la institución dejó una huella en el diseño de iniciativas técnicas y coordinación de equipos externos. Es un referente de cómo el perfil USACH se integra en la capa de arquitectura del banco.
+
 ---
 
 ## 2. Perfiles Adicionales y Estratégicos
@@ -41,6 +46,10 @@ Este informe complementa y actualiza el análisis previo sobre los tomadores de 
 ### Rodrigo Rojas Foncillas (Referente Estratégico)
 - **Cargo:** Consultor Senior (Ex-Gerente de Felicidad BancoEstado Microempresas).
 - **Relación USACH:** Aliado estratégico que ha colaborado con la red de alumni USACH dentro del banco. Su enfoque en "Experiencia de Colaborador" es clave para proyectos de gestión del cambio tecnológico.
+
+### [NEW] Fernando Javier del Pino Larzet
+- **Contexto:** Administrador Público (USACH).
+- **Relación:** Experto en gestión pública con experiencia en la relación institucional con BancoEstado.
 
 ---
 
