@@ -73,6 +73,36 @@
         .footer { margin-top: 60px; font-size: 0.7rem; color: #475569; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
         ul { padding-left: 20px; color: #cbd5e1; }
         li { margin-bottom: 10px; }
+
+        @media print {
+            body { background: #fff !important; color: #000 !important; padding: 20px !important; }
+            .container { 
+                background: #fff !important; 
+                border: none !important; 
+                box-shadow: none !important; 
+                padding: 0 !important; 
+                backdrop-filter: none !important;
+            }
+            h1 { 
+                background: none !important; 
+                -webkit-text-fill-color: #000 !important; 
+                color: #000 !important; 
+                border-bottom: 2px solid #f59e0b !important;
+            }
+            h2, h3 { color: #000 !important; }
+            h2::before { background: #f59e0b !important; }
+            table { background: #fff !important; border: 1px solid #e2e8f0 !important; }
+            th { background: #f8fafc !important; color: #000 !important; border: 1px solid #e2e8f0 !important; }
+            td { border: 1px solid #e2e8f0 !important; color: #475569 !important; }
+            blockquote { 
+                background: #f8fafc !important; 
+                border-left-color: #f59e0b !important; 
+                color: #475569 !important;
+                page-break-inside: avoid;
+            }
+            ul, li { color: #475569 !important; }
+            .footer { color: #94a3b8 !important; }
+        }
     </style>
 </head>
 <body>

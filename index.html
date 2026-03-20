@@ -232,6 +232,37 @@
             h1 { font-size: 2.2rem; }
             .grid { grid-template-columns: 1fr; }
         }
+
+        @media print {
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .glass-container { 
+                background: #fff !important; 
+                border: none !important; 
+                box-shadow: none !important; 
+                padding: 0 !important; 
+                backdrop-filter: none !important;
+            }
+            h1 { 
+                background: none !important; 
+                -webkit-text-fill-color: #000 !important; 
+                color: #000 !important; 
+                text-align: center;
+            }
+            .badge, .status-badge, .role, h2::before { color: #f59e0b !important; border-color: #f59e0b !important; }
+            .card { 
+                page-break-inside: avoid; 
+                background: #fff !important; 
+                border: 1px solid #e2e8f0 !important; 
+                color: #000 !important;
+                box-shadow: none !important;
+            }
+            .card h3, li strong { color: #000 !important; }
+            .description, .intro, .subtitle, li { color: #475569 !important; }
+            .badge:not(.print-visible), .divider, footer, header a, .section-box a { display: none !important; }
+            .section-box { border: 1px solid #e2e8f0 !important; background: #f8fafc !important; }
+            h2 { color: #000 !important; border-bottom: 2px solid #f59e0b; padding-bottom: 8px; }
+            li { background: #fff !important; border: 1px solid #f1f5f9 !important; }
+        }
     </style>
 </head>
 <body>
@@ -243,7 +274,7 @@
             
             <div style="margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                 <a href="opencore_report.html" class="badge" style="text-decoration: none; background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent); color: #fff; padding: 12px 24px;">🚀 Sinergia OpenCore & Outreach</a>
-                <a href="reporte_estrategico.pdf" class="badge" style="text-decoration: none; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); color: #94a3b8; padding: 12px 24px;">📥 Descargar PDF Dashboard</a>
+                <button onclick="window.print()" class="badge" style="cursor: pointer; text-decoration: none; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); color: #94a3b8; padding: 12px 24px;">📥 Descargar PDF Dashboard</button>
             </div>
 
             <div class="divider"></div>
@@ -347,9 +378,9 @@
                 <a href="opencore_report.html#outreach" style="text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
                     📧 Ver Plantillas Outreach
                 </a>
-                <a href="OPENCORE_STRATEGIC_SYNERGY.pdf" style="text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
-                    📄 PDF: Sinergia Ejecutiva
-                </a>
+                <button onclick="window.print()" style="cursor: pointer; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.02); color: #fff; font-weight: 600; text-align: center; transition: background 0.3s;">
+                    📄 Generar PDF: Sinergia Ejecutiva
+                </button>
             </div>
         </section>
 
